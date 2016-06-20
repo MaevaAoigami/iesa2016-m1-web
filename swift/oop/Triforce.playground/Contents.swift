@@ -5,14 +5,14 @@ class Personnage {
 }
 
 class Humain : Personnage {
-    var pouvoir: String
-    init(sexe: String, pouvoir: String) {
+    var pouvoir: [String] = ["Magie", "Indéfini"]
+    init(sexe: String, pouvoir: [String]) {
         self.pouvoir = pouvoir
         super.init(sexe: sexe)
     }
     func getType() -> String { return "Son pouvoir est \(pouvoir)" }
 }
 
-let p = Humain(sexe: "Féminin", pouvoir: "Magie")
+let p = Humain(sexe: "Féminin", pouvoir: pouvoir[0])
 p.getSexe()
 p.getType()
