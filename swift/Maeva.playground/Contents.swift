@@ -176,3 +176,29 @@ struct Card {
 
 let threeOfSpades = Card(rank: .Three, suit: .Spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+
+
+
+
+
+// Protocol & Extention
+protocol Personnage {
+    func deplacer() -> String
+}
+
+class Humain: Personnage {
+    func deplacer() -> String {
+        return "Marche"
+    }
+}
+
+class Limace: Personnage {
+    func deplacer() -> String {
+        return "Glisse"
+    }
+}
+
+let humain = Humain()
+let limace = Limace()
+print(humain.deplacer())
+print(limace.deplacer())
