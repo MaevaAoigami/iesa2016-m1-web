@@ -89,3 +89,18 @@ print(triangle.perimeter)
 triangle.perimeter = 9.9
 print(triangle.perimeter)
 print(triangle.sideLength)
+
+
+
+// 29 Paramètres nommés
+class Counter {
+    var count: Int = 0
+    func incrementBy(amount: Int, numberOfTimes times: Int) {
+        count += amount * times
+    }
+}
+
+var counter = Counter()
+counter.incrementBy(2, numberOfTimes:  7)0
+
+
