@@ -152,5 +152,27 @@ let aceRawValue = ace.rawValue
 
 
 
+// 34 Structure
+enum Suit: String {
+    case Hearts, Spades
+    case Clovers, Diamands
+    func getInfo() -> String {
+        switch self {
+        case .Hearts: return "hearts"
+        case .Spades: return "spades"
+        case .Clovers: return "clovers"
+        case .Diamands: return "diamands"
+        }
+    }
+}
 
+struct Card {
+    var rank: Rank
+    var suit: Suit
+    func simpleDescription() -> String {
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+    }
+}
 
+let threeOfSpades = Card(rank: .Three, suit: .Spades)
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()
