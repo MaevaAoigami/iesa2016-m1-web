@@ -166,16 +166,16 @@ enum Suit: String {
     }
 }
 
-struct Card {
-    var rank: Rank
-    var suit: Suit
-    func simpleDescription() -> String {
-        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
-    }
-}
-
-let threeOfSpades = Card(rank: .Three, suit: .Spades)
-let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+//struct Card {
+//    var rank: Rank
+//    var suit: Suit
+//    func simpleDescription() -> String {
+//        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+//    }
+//}
+//
+//let threeOfSpades = Card(rank: .Three, suit: .Spades)
+//let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 
 
 
@@ -202,3 +202,20 @@ let humain = Humain()
 let limace = Limace()
 print(humain.deplacer())
 print(limace.deplacer())
+
+
+
+
+// Access control
+class Book {
+    var author: String = "The author"
+    var title: String = "The title"
+    private func getDescription() -> String {
+        return "\(author) _ \(title)"
+    }
+}
+
+var book = Book()
+book.author = "Tango"
+book.title = "Charlie"
+print(book.getDescription())
